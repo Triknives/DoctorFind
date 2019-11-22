@@ -4,19 +4,19 @@ _Doctor Finder
 
 #### By _**Brett Cordell**
 
-## Description
+## Description:
+  This application will have the ability to allow a user to input a medical issue or a Doctor's name and having information provided to them via a search function that will provide information such as : first name, last name, address, phone number, website and whether or not the doctor is accepting new patient, as further described below in detail in the "Specs" section.
 
 Specs:
-*  
-*  
-*
+*  A user will be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
 
-Solar Years Formula by planet:
-*
-*
-*
-*
+*  A user will be able to enter a name to receive a list of doctors in the Portland area that fit the search query.
 
+* If the query response includes any doctors, the following information should be included about each doctor: first name, last name, address, phone number,   website and whether or not the doctor is accepting new patients (the API provides this data).
+
+* If the API call results in an error (any message not a 200 OK), the application should return a notification that states what the error is.
+
+* If the query response doesn't include any doctors (for instance, if no doctors meet the search criteria), the application should return a notification that states that no doctors meet the criteria. (This is not an error so it should be handled separately from any errors.)
 
 ## Setup/Installation Requirements
 * Clone or download Git files provided.
@@ -25,7 +25,6 @@ Solar Years Formula by planet:
 * Node.JS will be needed to utilize testing environment used for TDD process.
 * Webpack, and associated .JSON file have required dependencies.
 * "npm run install" will acquire needed packages and plugin associated with project.
-
 
 ## Known Bugs
 At this time there are no presented bugs that I have been able to come across. Should any bugs be encountered during your use of this project, please contact me at Cordell.desu@gmail.com and I will happily review them and work towards solutions. Please be provide information regarding location of the bug, and any context you find useful to better help the team address the bug/issue.
