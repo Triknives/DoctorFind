@@ -5,10 +5,13 @@ import './styles.css';
 import {DoctorFind} from './doctorFind.js';
 
 
-
 $(document).ready(function() {
   (async () => {
     let doctorFindInfo = new DoctorFind();
     const response = await doctorFindInfo.getDoctorInfo();
     getDoctorElement(response);
   })();
+
+  const getDoctorElement = (response) => {
+
+  };
