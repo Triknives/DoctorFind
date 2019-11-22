@@ -6,7 +6,8 @@ import {DoctorFind} from './doctorFind.js';
 
 
 $(document).ready(function() {
-  $('#')
+  $('#searchSubmit').submit(function(event){
+  event.preventDefault()
   (async () => {
     let doctorFindInfo = new DoctorFind();
     const response = await doctorFindInfo.getDoctorInfo();
@@ -18,3 +19,4 @@ $(document).ready(function() {
      console.log(response);
   };
 })
+}
