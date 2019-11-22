@@ -1,4 +1,4 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
@@ -6,6 +6,7 @@ import {DoctorFind} from './doctorFind.js';
 
 
 $(document).ready(function() {
+  $('#')
   (async () => {
     let doctorFindInfo = new DoctorFind();
     const response = await doctorFindInfo.getDoctorInfo();
@@ -13,6 +14,6 @@ $(document).ready(function() {
   })();
 
   const getDoctorElement = (response) => {
-     $('#doctorSearch').text(`${response.main.humidity}`);
+     $('#doctorSearch').text(`${response.meta[0].data.name}`);
   };
-}
+})
