@@ -7,16 +7,17 @@ import {DoctorFind} from './doctorFind.js';
 
 $(document).ready(function() {
   $('#searchSubmit').submit(function(event){
-  event.preventDefault()
-  (async () => {
-    let doctorFindInfo = new DoctorFind();
-    const response = await doctorFindInfo.getDoctorInfo();
-    getDoctorElement(response);
-  })();
+    event.preventDefault();
 
-  const getDoctorElement = (response) => {
-     $('#doctorSearch').text(`${response.meta[0].data.name}`);
-     console.log(response);
-  };
-})
-}
+    (async () => {
+      let doctorFindInfo = new DoctorFind();
+      const response = await doctorFindInfo.getDoctorInfo();
+      getDoctorElement(response);
+    })();
+
+    const getDoctorElement = (response) => {
+      $('#doctorSearch').text(response.data[0].profile.first_name);
+      console.log(response);
+    };
+  });
+});
