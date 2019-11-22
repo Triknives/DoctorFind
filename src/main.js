@@ -15,5 +15,6 @@ $(document).ready(function() {
 
   const getDoctorElement = (response) => {
      $('#doctorSearch').text(`${response.meta[0].data.name}`);
+     console.log(response);
   };
 })
