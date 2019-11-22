@@ -10,16 +10,16 @@ $(document).ready(function() {
     event.preventDefault();
 
 
-    const nameInput =$("#queryInput").val();
+    const name =$("#nameInput").val();
 
     (async () => {
       let doctorFindInfo = new DoctorFind();
-      const response = await doctorFindInfo.getDoctorInfo(query);
+      const response = await doctorFindInfo.getDoctorInfo(name);
       getDoctorElement(response);
     })();
 
     const getDoctorElement = (response) => {
-      $('#doctorSearch').text(response.data[0].profile.first_name);
+      $('#doctorSearch').text(response.data[0].profile.first_name +" "+ response.data[0].profile.last_name);
     };
   });
 });
