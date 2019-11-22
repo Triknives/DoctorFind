@@ -21,6 +21,8 @@ $(document).ready(function() {
     const getDoctorElement = (response) => {
       $('#nameSearch').text(" " + response.data[0].profile.first_name +" "+ response.data[0].profile.last_name);
       $('#contactNumber').text(" " +response.data[0].practices[0].phones[0].number);
+      $('#website').text(" " + response.data[0].practices[0].profile.website);
+      console.log(response);
     };
   });
 });
