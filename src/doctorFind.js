@@ -1,5 +1,5 @@
 export class DoctorFind {
-  async getDoctorinfo() {
+  async getDoctorInfo() {
     try {
       let response = await fetch(``);
       let jsonifiedResponse = await response.json();
