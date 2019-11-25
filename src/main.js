@@ -58,6 +58,7 @@ $(document).ready(function() {
 
   //Symptom search button and output
   $('#symptomSearch').submit(function(event){
+    event.preventDefault();
     const symptom =$("#symptomSearch").val();
 
     (async () => {
@@ -67,7 +68,8 @@ $(document).ready(function() {
     })();
 
     const getSymptomElements = (response) => {
-      $('#symptomSearchResults').text(" " + response.data[1].profile);
+      $('#symptomSearchResults').text(" " + response.data[0]);
+      console.log(response.data[0]);
     };
   });
 });
