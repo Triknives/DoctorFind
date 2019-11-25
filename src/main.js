@@ -9,6 +9,8 @@ $(document).ready(function() {
     $('#searchResults').show();
     event.preventDefault();
     const name =$("#nameInput").val();
+    const symptom =$("#symptomSearch").val();
+
 
     (async () => {
       let doctorFindInfo = new DoctorFind();
