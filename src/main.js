@@ -9,8 +9,6 @@ $(document).ready(function() {
     $('#searchResults').show();
     event.preventDefault();
     const name =$("#nameInput").val();
-    const symptom =$("#symptomSearch").val();
-
 
     (async () => {
       let doctorFindInfo = new DoctorFind();
@@ -20,13 +18,8 @@ $(document).ready(function() {
       getDoctorElements2(response);
     })();
 
-    (async () => {
-      let symptomSearched = new DoctorFind();
-      const response = await symptomSearched.symptomSearch(symptom);
-      getSymptomElements(response);
-    })();
 
-  //Below will display first doctor within search array.
+    //Below will display first doctor within search array.
     const getDoctorElement = (response) => {
       $('#nameSearch').text(" " + response.data[0].profile.first_name +" "+ response.data[0].profile.last_name);
       $('#contactNumber').text(" " +response.data[0].practices[0].phones[0].number);
@@ -35,7 +28,7 @@ $(document).ready(function() {
       if (response.data[0].practices[0].website === undefined){
         return $('#website').text(" " + "Sorry, they don't appear to have a website!");
       }else
-        $('#website').text(" " + response.data[0].practices[0].website);
+      $('#website').text(" " + response.data[0].practices[0].website);
     };
 
     //Below will display doctor number 2 within search array.
@@ -47,7 +40,7 @@ $(document).ready(function() {
       if (response.data[1].practices[0].website === undefined){
         return $('#website2').text(" " + "Sorry, they don't appear to have a website!");
       }else
-        $('#website2').text(" " + response.data[1].practices[0].website);
+      $('#website2').text(" " + response.data[1].practices[0].website);
     };
 
     //Below will display doctor number 3 within search array.
@@ -59,11 +52,22 @@ $(document).ready(function() {
       if (response.data[2].practices[0].website === undefined){
         return $('#website3').text(" " + "Sorry, they don't appear to have a website!");
       }else
-        $('#website3').text(" " + response.data[2].practices[0].website);
+      $('#website3').text(" " + response.data[2].practices[0].website);
     };
+  });
+
+  //Symptom search button and output
+  $('#symptomSearch').submit(function(event){
+    const symptom =$("#symptomSearch").val();
+
+    (async () => {
+      let symptomSearched = new DoctorFind();
+      const response = await symptomSearched.symptomSearch(symptom);
+      getSymptomElements(response);
+    })();
 
     const getSymptomElements = (response) => {
-      $('#symptomSearch').text(" " + response.data[1].profile);
+      $('#symptomSearchResults').text(" " + response.data[1].profile);
     };
   });
 });
