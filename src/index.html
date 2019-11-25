@@ -9,7 +9,7 @@
       <h2>Welcome, this is Doctor Find!</h2>
     </div>
     <div id="intro">
-    <h6>Hello, welcome to Doctor Find! Our goal is to help you locate a provided in the Portland, Or area! Below you will see two search fields! Please enter the name of the provider (as best you can) or, provide us with a symptom or an associated speciality, or field (toothache, dentist) and we will do our best to locate a provider to meet your needs.</h6>
+    <h6>Hello, welcome to Doctor Find! Our goal is to help you locate a provided in the Portland, Or area! Below you will see two search fields! Please enter the name of the provider (as best you can) or, provide us with a symptom or an associated specialty, or field (toothache, dentist) and we will do our best to locate a provider to meet your needs.</h6>
     </div>
     <br>
     <br>
@@ -18,14 +18,17 @@
       <button type="submit" name="button">Search</button>
     </form>
     <br>
+    <!-- search for specific symptoms or specialty -->
     <form id="symptomSearch">
-      <input id ="nameInput" type="text" placeholder="Please provide a symptom or speciality">
+      <input id ="nameInput" type="text" placeholder="Please provide a symptom or specialty">
       <button type="submit" name="button">Search</button>
     </form>
     <br>
+    <!-- landing for zero results -->
     <div id="zeroResults">
           <span id="noResults"></span>
     </div>
+    <!-- primary landing for successful results and list population -->
     <div id="searchResults">
       <h5>Search Results:</h5>
       <ul>
