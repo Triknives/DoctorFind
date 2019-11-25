@@ -21,11 +21,9 @@ $(document).ready(function() {
     (async () => {
       let symptomSearched = new DoctorFind();
       const response = await symptomSearched.symptomSearch(symptom);
-      getDoctorElement(response);
-      getDoctorElements1(response);
-      getDoctorElements2(response);
+      getSymptomElements(response);
     })();
-    
+
   //Below will display first doctor within search array.
     const getDoctorElement = (response) => {
       $('#nameSearch').text(" " + response.data[0].profile.first_name +" "+ response.data[0].profile.last_name);
@@ -60,6 +58,10 @@ $(document).ready(function() {
         return $('#website3').text(" " + "Sorry, they don't appear to have a website!");
       }else
         $('#website3').text(" " + response.data[2].practices[0].website);
+    };
+
+    const getSymptomElements = (response) => {
+      $('#symptomSearch').text(" " + response.data[1].profile);
     };
   });
 });
