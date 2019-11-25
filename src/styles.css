@@ -1,0 +1,12 @@
+#searchResults {
+  border: 2px black solid;
+}
+
+#intro, .jumbotron {
+  text-align: center;
+}
+
+#nameInput {
+  margin-left: 380px;
+  width: 30%;
+}

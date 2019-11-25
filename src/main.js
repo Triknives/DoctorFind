@@ -7,6 +7,7 @@ import {DoctorFind} from './doctorFind.js';
 
 $(document).ready(function() {
   $('#searchSubmit').submit(function(event){
+    $('#searchResults').show();
     event.preventDefault();
 
     const name =$("#nameInput").val();
@@ -20,7 +21,6 @@ $(document).ready(function() {
     })();
 
     const getDoctorElement = (response) => {
-      response.data[0];
       $('#nameSearch').text(" " + response.data[0].profile.first_name +" "+ response.data[0].profile.last_name);
       $('#contactNumber').text(" " +response.data[0].practices[0].phones[0].number);
       $('#address').text(" " +response.data[0].practices[0].visit_address.street);
@@ -30,7 +30,6 @@ $(document).ready(function() {
       }else
       $('#website2').text(" " + response.data[1].practices[0].website);
     };
-
 
     //Below will display doctor number 2 within search array.
     const getDoctorElements1 = (response) => {
