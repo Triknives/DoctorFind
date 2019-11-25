@@ -1,5 +1,6 @@
 #searchResults {
   border: 2px black solid;
+  display:none;
 }
 
 #intro, .jumbotron {
