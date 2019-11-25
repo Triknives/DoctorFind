@@ -15,6 +15,8 @@ $(document).ready(function() {
       let doctorFindInfo = new DoctorFind();
       const response = await doctorFindInfo.getDoctorInfo(name);
       getDoctorElement(response);
+      getDoctorElements1(response);
+      getDoctorElements2(response);
     })();
 
     const getDoctorElement = (response) => {
@@ -27,10 +29,12 @@ $(document).ready(function() {
         return $('#website').text(" " + "Sorry, they don't appear to have a website!");
       }else
       $('#website2').text(" " + response.data[1].practices[0].website);
+    };
 
 
-      
-      //Below will display doctor number 2 within search array.
+    //Below will display doctor number 2 within search array.
+    const getDoctorElements1 = (response) => {
+
       $('#nameSearch2').text(" " + response.data[1].profile.first_name +" "+ response.data[1].profile.last_name);
       $('#contactNumber2').text(" " +response.data[1].practices[0].phones[0].number);
       $('#address2').text(" " +response.data[1].practices[0].visit_address.street);
@@ -39,6 +43,18 @@ $(document).ready(function() {
         return $('#website2').text(" " + "Sorry, they don't appear to have a website!");
       }else
       $('#website2').text(" " + response.data[1].practices[0].website);
+    };
+
+    //Below will display doctor number 3 within search array.
+    const getDoctorElements2 = (response) => {
+      $('#nameSearch3').text(" " + response.data[2].profile.first_name +" "+ response.data[2].profile.last_name);
+      $('#contactNumber3').text(" " +response.data[2].practices[0].phones[0].number);
+      $('#address3').text(" " +response.data[2].practices[0].visit_address.street);
+      $('#acceptingClients3').text(" " +response.data[2].practices[0].accepts_new_patients);
+      if (response.data[2].practices[0].website === undefined){
+        return $('#website3').text(" " + "Sorry, they don't appear to have a website!");
+      }else
+      $('#website3').text(" " + response.data[2].practices[0].website);
     };
   });
 });
