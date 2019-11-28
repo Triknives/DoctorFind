@@ -16,12 +16,12 @@ $(document).ready(function() {
       getDoctorElement(response);
     })();
     const getDoctorElement = (response) => {
-      response.data.forEach(function(doctor){
+      response.data.forEach(function(name){
         $('#nameSearch').append("<li>" + response.data[0].profile.first_name +" "+ response.data[0].profile.last_name+ "</li>");
         response.data.forEach(function(number){
-          $('#contactNumber').append("<li>" +response.data[0].practices[0].phones[0].number + "</li>");
+          $('#contactNumber').append("<li>" + response.data[0].practices[0].phones[0].number + "</li>");
           response.data.forEach(function(address){
-            $('#address').append("<li>" +response.data[0].practices[0].visit_address.street + "</li>");
+            $('#address').append("<li>" + response.data[0].practices[0].visit_address.street + "</li>");
             response.data.forEach(function(accepting){
               $('#acceptingClients').append("<li>" +response.data[0].practices[0].accepts_new_patients + "</li>");
               console.log(response);
