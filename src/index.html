@@ -9,54 +9,28 @@
       <h2>Welcome, this is Doctor Find!</h2>
     </div>
     <div id="intro">
-      <h6>Hello, welcome to Doctor Find! Our goal is to help you locate a provided in the Portland, Or area! Below you will see two search fields! Please enter the name of the provider (as best you can) or, provide us with a symptom or an associated specialty, or field (toothache, dentist) and we will do our best to locate a provider to meet your needs.</h6>
+      <h6>Hello, welcome to Doctor Find! Our goal is to help you locate a provided in the Portland, Or area! Below you will see two search fields! Please enter the name of the provider (as best you can) or, provide us with a symptom or an associated speciality, or field (toothache, dentist) and we will do our best to locate a provider to meet your needs.</h6>
     </div>
     <br>
     <br>
     <form id="searchSubmit">
-      <input id ="nameInput" type="text" placeholder="Please enter provider name">
+      <input id ="nameInput" type="text">
       <button type="submit" name="button">Search</button>
     </form>
     <br>
-    <!-- search for specific symptoms or specialty -->
-    <form id="symptomSearch">
-      <input id ="nameInput" type="text" placeholder="Please provide a symptom or specialty">
-      <button type="submit" name="button">Search</button>
-    </form>
-    <br>
-    <!-- landing for zero results -->
     <div id="zeroResults">
       <span id="noResults"></span>
     </div>
-    <!-- primary landing for successful results and list population -->
     <div id="searchResults">
       <h5>Search Results:</h5>
       <ul>
-        <li><strong>Name:</strong><span id="nameSearch"></span></li>
-        <li><strong>Contact Number:</strong><span id="contactNumber"></li>
-          <li><strong>Address:</strong><span id="address"></span></li>
-          <li><strong>Website:</strong><span id="website"></li>
-            <li><strong>Taking new clients:</strong><span id="acceptingClients"></span></li>
-          </ul>
-          <ul>
-            <li><strong>Name:</strong><span id="nameSearch2"></span></li>
-            <li><strong>Contact Number:</strong><span id="contactNumber2"></li>
-              <li><strong>Address:</strong><span id="address2"></span></li>
-              <li><strong>Website:</strong><span id="website2"></li>
-                <li><strong>Taking new clients:</strong><span id="acceptingClients2"></span></li>
-              </ul>
-              <ul>
-                <li><strong>Name:</strong><span id="nameSearch3"></span></li>
-                <li><strong>Contact Number:</strong><span id="contactNumber3"></li>
-                  <li><strong>Address:</strong><span id="address3"></span></li>
-                  <li><strong>Website:</strong><span id="website3"></li>
-                    <li><strong>Taking new clients:</strong><span id="acceptingClients3"></span></li>
-                  </ul>
-                </div>
-                <!-- landing zone for symptoms search -->
-                <div id="symptomSearchResults">
-
-                </div>
-              </div>
-            </body>
-            </html>
+        <span id="nameSearch"></span>
+        <span id="contactNumber"></span>
+        <span id="address"></span>
+        <span id="website"></span>
+        <span id="acceptingClients"></span>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
