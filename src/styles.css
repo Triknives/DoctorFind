@@ -1,6 +1,9 @@
 #searchResults {
   border: 2px black solid;
   display:none;
+  list-style: none;
+  padding:10px;
+  margin:15px;
 }
 
 #intro, .jumbotron {
