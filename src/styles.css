@@ -1,3 +1,18 @@
+body{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#intro {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+jumbotron {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 #searchResults {
   border: 2px black solid;
   display:none;
@@ -11,6 +26,11 @@
 }
 
 #nameInput {
+  margin-left: 380px;
+  width: 30%;
+}
+
+#issueInput {
   margin-left: 380px;
   width: 30%;
 }
