@@ -5,6 +5,7 @@ export class DoctorFind {
       let jsonifiedResponse = await response.json();
       return jsonifiedResponse;
     } catch(error) {
+      $('#searchResults').text("Sorry, there was an issue with your request." + error.message);
       console.error("There was an error handling your request: " + error.message);
     }
   }
@@ -14,6 +15,7 @@ export class DoctorFind {
       let jsonifiedResponse = await response.json();
       return jsonifiedResponse;
     } catch(error) {
+      $('#searchResults').text("Sorry, there was an issue with your request." + error.message);
       console.error("There was an error handling your request: " + error.message);
     }
   }
